@@ -65,3 +65,10 @@ function divisione() {
     let risultato = num1 / num2;
     stampaRis(risultato);
 }
+
+function reset() {
+    let form = document.getElementById('inserimento');
+    form.reset();
+    let risultato = 0;
+    stampaRis(risultato); 
+}

@@ -93,6 +93,10 @@ i {
     max-width:fit-content;
 }
 
+#inserimento {
+    align-items: center;
+}
+
 .calcolatrice button {
     width: 90px;
     padding: 1em;
@@ -113,7 +117,7 @@ button:hover{
     justify-content: end;
     margin: 0 auto;
     height: 80px;
-    min-width: 360px;
+    min-width: 450px;
     max-width: fit-content;
     background-color: black;
 }
