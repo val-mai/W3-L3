@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form + calcolatrice</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <div class="form">
+        <h2>Registrazione</h2>
+        <form action="" id="myForm">
+            <input type="text" placeholder="Inserisci il tuo nome" id="nome">
+            <input type="text" placeholder="Inserisci il tuo cognonome" id="cognome">
+            <input type="number" placeholder="Inserisci la tua età" id="age">
+            <input type="email" placeholder="Inserisci la tua email" id="mail">
+        </form>
+        <button id="registrati" onclick="getInfo()">REGISTRATI!</button>
+    </div>
+    <div class="card">
+        <img src="img/logo.png" alt="logo">
+        <h2>Info utente</h2>
+        <table>
+            <tr>
+                <th class="icon"><i class="fa-solid fa-user"></i></i></th>
+                <th>Utente: </span></th>
+                <td id="user"></td>
+            </tr>
+            <tr>
+                <th class="icon"><i class="fa-solid fa-calendar-day"></i></th>
+                <th>Età: </th>
+                <td id="card_age"></td>
+            </tr>
+            <tr>
+                <th class="icon"><i class="fa-solid fa-paper-plane"></i></th>
+                <th>Email: </th>
+                <td id="card_email"></td>
+            </tr>
+        </table>
+        <p id="anniMancanti"></p>
+    </div>
+    <hr>
+    <div class="calcolatrice">
+        <h2>Calcolatrice</h2>
+        <div class="inserimento">
+            <label for="num1">Primo numero</label>
+            <input type="number" id="num1">
+            <label for="num2">Secondo numero</label>
+            <input type="number" id="num2">
+        </div>
+        <h4>Operazioni</h4>
+        <div class="operatori">
+            <button onclick="somma()"><i class="fa-solid fa-plus"></i></button>
+            <button onclick="sottr()"><i class="fa-solid fa-minus"></i></button>
+            <button onclick="prodotto()"><i class="fa-solid fa-xmark"></i></button>
+            <button onclick="divisione()"><i class="fa-solid fa-divide"></i></button>
+        </div>
+        <div class="res">
+            <h2 id="risultato"></h2>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
