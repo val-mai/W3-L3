@@ -4,7 +4,7 @@ let cognome;
 let age;
 let email;
 
-function innerInfo () {
+function innerInfo() {
     document.getElementById('user').innerHTML = nome + ' ' + cognome;
     document.getElementById('card_age').innerHTML = age;
     document.getElementById('card_email').innerHTML = email;
@@ -12,20 +12,24 @@ function innerInfo () {
 
 function pensione(anni) {
     let anniMancanti = 70 - anni;
-    document.getElementById('anniMancanti').innerHTML = '<p>La tua pensione è prevista tra ' + anniMancanti + ' anni</p>';
+    if (anniMancanti <= 0) {
+        document.getElementById('anniMancanti').innerHTML = '<p>Puoi già andare in pensione, congratulazioni!</p>';
+    } else {
+        document.getElementById('anniMancanti').innerHTML = '<p>La tua pensione è prevista tra ' + anniMancanti + ' anni</p>';
+    }
 }
 
-function getInfo () {
+function getInfo() {
     nome = document.getElementById('nome').value;
     cognome = document.getElementById('cognome').value;
     age = document.getElementById('age').value;
     email = document.getElementById('mail').value;
-    
+
     innerInfo();
     pensione(age);
-    
+
     let form = document.getElementById('myForm');
-    form.reset(); 
+    form.reset();
 }
 
 /* Calcolatrice */
@@ -70,5 +74,5 @@ function reset() {
     let form = document.getElementById('inserimento');
     form.reset();
     let risultato = 0;
-    stampaRis(risultato); 
+    stampaRis(risultato);
 }
